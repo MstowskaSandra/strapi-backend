@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pods",
+  "info": {
+    "singularName": "pod",
+    "pluralName": "pods",
+    "displayName": "POD"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Brand": {
+      "type": "string"
+    },
+    "Model": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Battery": {
+      "type": "string"
+    },
+    "Power": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "string"
+    },
+    "Color": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Model"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category-pod.category-pod",
+      "mappedBy": "pods"
+    }
+  }
+}

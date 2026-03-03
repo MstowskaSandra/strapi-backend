@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "category_pods",
+  "info": {
+    "singularName": "category-pod",
+    "pluralName": "category-pods",
+    "displayName": "CategoryPod"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "pods": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::pod.pod",
+      "inversedBy": "categories"
+    }
+  }
+}

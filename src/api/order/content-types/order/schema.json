@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Orders"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "orderNumber": {
+      "type": "string"
+    },
+    "customerName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "shop": {
+      "type": "enumeration",
+      "enum": [
+        "Olawa",
+        "Strzelin"
+      ]
+    },
+    "items": {
+      "type": "json"
+    },
+    "totalPrice": {
+      "type": "string"
+    },
+    "OrderStatus": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "confirmed",
+        "ready",
+        "completed"
+      ]
+    },
+    "orderDate": {
+      "type": "datetime"
+    }
+  }
+}
